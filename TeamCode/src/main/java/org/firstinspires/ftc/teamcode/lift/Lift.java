@@ -151,7 +151,13 @@ public class Lift {
         rightMotor.setPower(LIFT_POWER);
     }
 
-    public double[] getPower() {
+    public void AutoRetract() {
+        leftMotor.setTargetPosition(-100);
+        rightMotor.setTargetPosition(-100);
+    }
+
+
+        public double[] getPower() {
         return new double[] {leftMotor.getPower(), rightMotor.getPower()};
     }
 }
